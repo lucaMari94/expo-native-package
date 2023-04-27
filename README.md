@@ -78,6 +78,25 @@ To install native module created directly into your project by running **npm ins
 
     npm install /path/to/tarball
 
+## Test the published package
+
+You should now be able to use the module inside your app! To test it, edit the App.js in the app and render the text message from expo-settings.
+
+```
+import * as Settings from 'expo-settings';
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>{Settings.hello()}</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+```
 ## Resources and documentation
 
 [`Expo Documentation`](https://docs.expo.dev)
